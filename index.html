@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIBO Agency | Premium Sales & Marketing Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a1930;
+            --primary-light: #1a2a4a;
+            --secondary: #d4af37;
+            --secondary-light: #e6c76d;
+            --dark: #050a15;
+            --light: #f8f9fc;
+            --gray: #a3aec9;
+            --light-gray: #2a3b5f;
+            --transition: all 0.3s ease;
+        }
+
+        /* [Previous CSS remains exactly the same until the logo styles] */
+
+        /* ==================== NEW LOGO STYLES ==================== */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        /* SVG Logo Container */
+        .logo-svg {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+        
+        /* Text Fallback Logo (hidden by default) */
+        .text-logo {
+            display: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            text-decoration: none;
+        }
+        .text-logo span:first-child {
+            color: #0a1930;
+        }
+        .text-logo span:last-child {
+            color: #d4af37;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        /* Logo Display Section */
+        .logo-display .logo-svg {
+            height: 120px;
+            margin: 0 auto 20px;
+        }
+        
+        /* Fallback if SVG fails to load */
+        @media (max-width: 768px) {
+            .logo-svg {
+                height: 40px;
+            }
+            .logo-display .logo-svg {
+                height: 80px;
+            }
+        }
+        
+        /* If SVG fails, show text logo */
+        .svg-fallback .logo-svg {
+            display: none;
+        }
+        .svg-fallback .text-logo {
+            display: flex;
+        }
+        
+        /* [Rest of your existing CSS remains exactly the same] */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo-container">
+                    <!-- SVG Logo -->
+                    <svg class="logo-svg" width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="10" height="20" fill="#d4af37"/>
+                        <rect x="30" y="10" width="10" height="20" fill="#d4af37"/>
+                        <rect x="50" y="10" width="10" height="20" fill="#d4af37"/>
+                        <rect x="10" y="40" width="10" height="10" fill="#d4af37"/>
+                        <rect x="30" y="40" width="10" height="10" fill="#d4af37"/>
+                        <text x="80" y="38" font-family="Montserrat" font-weight="800" font-size="28" fill="#0a1930">SIBO</text>
+                        <text x="150" y="38" font-family="Montserrat" font-weight="600" font-size="28" fill="#d4af37">AGENCY</text>
+                    </svg>
+                    
+                    <!-- Text Fallback Logo -->
+                    <span class="text-logo">
+                        <span>SIBO</span>
+                        <span>AGENCY</span>
+                    </span>
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#values">Values</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <!-- [Your existing hero section content] -->
+    </section>
+
+    <section class="logo-section">
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo-display">
+                    <svg class="logo-svg" width="300" height="90" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="10" width="10" height="20" fill="#d4af37"/>
+                        <rect x="30" y="10" width="10" height="20" fill="#d4af37"/>
+                        <rect x="50" y="10" width="10" height="20" fill="#d4af37"/>
+                        <rect x="10" y="40" width="10" height="10" fill="#d4af37"/>
+                        <rect x="30" y="40" width="10" height="10" fill="#d4af37"/>
+                        <text x="80" y="38" font-family="Montserrat" font-weight="800" font-size="28" fill="#0a1930">SIBO</text>
+                        <text x="150" y="38" font-family="Montserrat" font-weight="600" font-size="28" fill="#d4af37">AGENCY</text>
+                    </svg>
+                </div>
+                <h2>Your Trusted Sales Partner</h2>
+                <p>Professional sales solutions for businesses across Kenya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- [All other sections remain exactly the same] -->
+
+    <script>
+        // Add this to detect SVG support and fallback if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if SVG is supported
+            if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1")) {
+                document.body.classList.add('svg-fallback');
+            }
+            
+            // Check if SVG actually rendered
+            const svg = document.querySelector('.logo-svg');
+            if (svg.getBoundingClientRect().width === 0) {
+                document.body.classList.add('svg-fallback');
+            }
+        });
+
+        // [Rest of your existing JavaScript remains the same]
+    </script>
+</body>
+</html>
